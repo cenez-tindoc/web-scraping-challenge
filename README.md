@@ -1,3 +1,3 @@
 # web-scraping-challenge
 
-this homework is not yet done/ complete.  I still need to upload step 2 and 3.
+This homework comprised of two steps: (1) Scraping and (2) MongoDB and Flask Application
