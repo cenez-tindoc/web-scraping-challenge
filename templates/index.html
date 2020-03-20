@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+    <!-- Mars Listings -->
+    <div class="row" id="mars_news">
+      <div class="col-md-12">
+        <h2 class="heading">Latest Mars News</h2>
+        <h4>{{mars_html.title}}</h4>
+        <p>{{mars_html.paragraph}}</p>
+      </div>
+    </div>
+    <div class="row" id="mars_feature_image">
+      <div class="col-md-8">
+        <h4 class="heading">Featured Mars Image</h4>
+        <img src={{mars_html.full_img_url}} alt="">
+    </div>
+    <div class = "col-md-4">
+      <div class  = "row" id = "Mars-Weather">
+          <div class ="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <h4>Mars Current Weather</h4>
+                  <p>{{mars_html.tweet}}</p>
+                </div>
+              </div>  
+          </div>
+      </div>  
+      <div class  = "row" id = "Mars-facts">
+          <div class ="col-md-12">
+            <h4>Mars Facts</h4>
+            <p>{{mars_html.mars_html_table}}</p>
+          </div>
+      </div>
+    </div>   
+    <div class = "row" id = "mars-hemisphere">
+        <h2 class="text-center"> Mars Hemisphere </h2>
+        <p>{{dict.hemi_imglist}}</p>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
